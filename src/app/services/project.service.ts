@@ -5,7 +5,7 @@ export class ProjectService {
 
   constructor() { }
 
-  addProject() {
+  createProject() {
     // TODO
   }
 

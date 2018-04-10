@@ -5,7 +5,7 @@ export class UserService {
 
   constructor() { }
 
-  addUser() {
+  createUser() {
     // TODO
   }
 
@@ -17,7 +17,7 @@ export class UserService {
     // TODO
   }
 
-  getUser() {
+  getUserById() {
     // TODO
   }
 
