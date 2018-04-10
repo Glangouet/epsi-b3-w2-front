@@ -32,4 +32,8 @@ export class UserService {
   getAllUsersByCampusAndRoles() {
     // TODO
   }
+
+  getUsersByProject() {
+      // TODO
+  }
 }

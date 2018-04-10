@@ -28,8 +28,4 @@ export class ProjectService {
   getProjectsByUser() {
     // TODO
   }
-
-  getUsersByProject() {
-    // TODO
-  }
 }
