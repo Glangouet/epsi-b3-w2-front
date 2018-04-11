@@ -10,18 +10,22 @@ import {UserViewComponent} from './user/user-view/user-view.component';
 import {AdminComponent} from './admin/admin.component';
 import {UserCreateComponent} from './admin/user-create/user-create.component';
 import {UserUpdateComponent} from './admin/user-update/user-update.component';
+import {ProjectMyComponent} from './project/project-my/project-my.component';
+import {UserListComponent} from './admin/user-list/user-list.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'project', component: ProjectComponent },
-    { path: 'project/create', component: ProjectCreateComponent },
-    { path: 'project/update/{id}', component: ProjectUpdateComponent },
-    { path: 'project/view/{id}', component: ProjectViewComponent},
+    { path: 'projects', component: ProjectComponent },
+    { path: 'my-projects', component: ProjectMyComponent },
+    { path: 'projects/create', component: ProjectCreateComponent },
+    { path: 'projects/update/:id', component: ProjectUpdateComponent },
+    { path: 'projects/view/:id', component: ProjectViewComponent},
     { path: 'users', component: UserComponent},
-    { path: 'users/{id}', component: UserViewComponent},
+    { path: 'users/:id', component: UserViewComponent},
     { path: 'admin', component: AdminComponent },
-    { path: 'admin/user/create', component: UserCreateComponent},
-    { path: 'admin/user/{id}', component: UserUpdateComponent },
+    { path: 'admin/users', component: UserListComponent },
+    { path: 'admin/users/create', component: UserCreateComponent},
+    { path: 'admin/users/view/:id', component: UserUpdateComponent },
 ];
 
 @NgModule({

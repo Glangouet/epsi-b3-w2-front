@@ -19,6 +19,8 @@ import { UserComponent } from './user/user.component';
 import { UserViewComponent } from './user/user-view/user-view.component';
 import { UserCreateComponent } from './admin/user-create/user-create.component';
 import { UserUpdateComponent } from './admin/user-update/user-update.component';
+import { ProjectMyComponent } from './project/project-my/project-my.component';
+import { UserListComponent } from './admin/user-list/user-list.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { UserUpdateComponent } from './admin/user-update/user-update.component';
     UserComponent,
     UserCreateComponent,
     UserUpdateComponent,
-    UserViewComponent
+    UserViewComponent,
+    ProjectMyComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
