@@ -1,4 +1,4 @@
 export class Project {
-    private id;
-    private name;
+    public id;
+    public name;
 }

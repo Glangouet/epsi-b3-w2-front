@@ -18,7 +18,8 @@ export class UserUpdateComponent implements OnInit {
 
   public updateUser() {
       this.userService.updateUser(this.user, state => {
-          console.log(state);
+        console.log(state);
+        this.user = state;
       });
   }
 
