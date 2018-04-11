@@ -5,11 +5,16 @@
   <hr>
   <div class="row">
     <div class="col-lg-12">
-      <form action="/action_page.php" style="max-width: 700px;" class="mx-auto">
+      <form (ngSubmit)="addProject(projectForm)" #projectForm="ngForm" enctype="multipart/form-data" style="max-width: 700px;" class="mx-auto">
         <div class="form-group">
           <label for="name">Name of project:</label>
-          <input type="text" class="form-control" id="name">
-        </div>
+          <input type="text"
+                 class="form-control"
+                 id="name"
+                 #name="ngModel"
+                 name="name"
+                 [(ngModel)]="project.name">
+        </div> // TODO
         <div class="form-group">
           <label for="description">Description of project:</label>
           <input type="text" class="form-control" id="description">

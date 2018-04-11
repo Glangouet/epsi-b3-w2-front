@@ -16,8 +16,12 @@ export class UserCreateComponent implements OnInit {
     this.user = new User();
   }
 
-  public addUser(form) {
-    console.log(form);
+  public addUser() {
+    this.userService.createUser(this.user, (state) => {
+      console.log(state);
+      this.user = new User();
+    });
+    console.log(this.user);
   }
 
 }
