@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HomeComponent} from './home/home.component';
@@ -21,6 +22,7 @@ import { UserCreateComponent } from './admin/user-create/user-create.component';
 import { UserUpdateComponent } from './admin/user-update/user-update.component';
 import { ProjectMyComponent } from './project/project-my/project-my.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { UserListComponent } from './admin/user-list/user-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
       AuthService,
