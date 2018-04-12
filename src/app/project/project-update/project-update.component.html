@@ -1,36 +1,59 @@
 <div class="page-header">
-  <h2>Project update</h2>
+  <h2>Modifier un projet</h2>
 </div>
-<p class="lead">Warning, you will update this project: name of project.</p>
 <hr>
 <div class="row">
   <div class="col-lg-12">
     <form action="/action_page.php" style="max-width: 700px;" class="mx-auto">
       <div class="form-group">
-        <label for="name">Name of project:</label>
-        <input type="text" class="form-control" id="name">
+        <label for="name">Nom:</label>
+        <input type="text"
+               class="form-control"
+               id="name"
+               #name="ngModel"
+               name="name"
+               [(ngModel)]="project.name">
       </div>
       <div class="form-group">
-        <label for="description">Description of project:</label>
-        <input type="text" class="form-control" id="description">
+        <label for="description">Description:</label>
+        <input type="text"
+               class="form-control"
+               id="description"
+               #name="ngModel"
+               name="description"
+               [(ngModel)]="project.description">
       </div>
       <div class="form-group">
         <label for="users">Select partners</label>
-        <input type="text" class="form-control" id="users">
+        <input type="text"
+               class="form-control"
+               id="users"
+               #name="ngModel"
+               name="users"
+               [(ngModel)]="project.users">
       </div>
       <div class="form-group">
         <label for="date-start">Date de début du projet:</label>
-        <input type="text" class="form-control" id="date-start">
+        <input type="text" class="form-control" id="date-start"
+               #name="ngModel"
+               name="date-start"
+               [(ngModel)]="project.date-start">
       </div>
       <div class="form-group">
-        <label for="date-start">Date de fin du projet:</label>
-        <input type="text" class="form-control" id="date-end">
+        <label for="date-end">Date de fin du projet:</label>
+        <input type="text" class="form-control" id="date-end"
+               #name="ngModel"
+               name="date-end"
+               [(ngModel)]="project.date-end">
       </div>
       <div class="form-group">
-        <label for="token">Number of token:</label>
-        <input type="number" class="form-control" id="token">
+        <label for="token">Nombre de jetons:</label>
+        <input type="text" class="form-control" id="token"
+               #name="ngModel"
+               name="token"
+               [(ngModel)]="project.token">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Modifier</button>
     </form>
   </div>
 </div>

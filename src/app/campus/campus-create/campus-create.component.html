@@ -4,19 +4,17 @@
 <hr>
 <div class="row">
   <div class="col-lg-12">
-    <form (ngSubmit)="addUser(userForm)" #userForm="ngForm" enctype="multipart/form-data" style="max-width: 700px;" class="mx-auto">
+    <form (ngSubmit)="addCampus(campusForm)" #campusForm="ngForm" enctype="multipart/form-data" style="max-width: 700px;" class="mx-auto">
       <div class="form-group">
-        <label for="login">Nom du campus :</label>
+        <label for="name">Nom du campus :</label>
         <input type="text"
                class="form-control"
-               id="login"
+               id="name"
                #name="ngModel"
-               name="login"
-               [(ngModel)]="user.login">
+               name="name"
+               [(ngModel)]="campus.name">
       </div>
-
-
-      <button type="submit" class="btn btn-primary"><i class="fa fa-arrow"></i> Submit</button>
+      <button type="submit" class="btn btn-primary"><i class="fa fa-arrow"></i>Créer</button>
     </form>
   </div>
 </div>
