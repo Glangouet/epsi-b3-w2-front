@@ -15,16 +15,19 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let project of projects;" [routerLink]="['/projects/view/', project.id]" style="cursor: pointer;">
-        <td>{{ project.id }}</td>
-        <td>{{ project.name }}</td>
-        <td>
-          <ul>
-            <li *ngFor="let partner of project.partners">{{ partner.username }}</li>
-          </ul>
-        </td>
-        <td>{{ project.creationDate | customDate }}</td>
-      </tr>
+        <tr *ngFor="let project of projects;" [routerLink]="['/projects/view/', project.id]" style="cursor: pointer;">
+          <td>{{ project.id }}</td>
+          <td>{{ project.name }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let partner of project.partners">{{ partner.username }}</li>
+            </ul>
+          </td>
+          <td>{{ project.creationDate | customDate }}</td>
+          <td><button class="btn btn-sm btn-primary" [routerLink]="['/projects/view/', project.id]"><i class="fa fa-eye"></i></button></td>
+          <td><button class="btn btn-sm btn-warning" [routerLink]="['/projects/update/', project.id]"><i class="fa fa-wrench"></i></button></td>
+          <td><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
+        </tr>
       </tbody>
     </table>
   </div>
