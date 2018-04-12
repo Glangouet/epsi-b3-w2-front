@@ -9,7 +9,7 @@
           <i class="fa fa-user-o"></i><span style="margin-left: 0.5em;" class="d-none d-md-inline">Professeur</span>
         </a>
         <div class="collapse" id="menuProfesseur" data-parent="#sidebar">
-          <a href="#" [routerLink]="['/admin/users']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les utilisateurs</a>
+          <a href="#" [routerLink]="['/users']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les utilisateurs</a>
           <a href="#" [routerLink]="['/admin/users/update']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Modifier son compte</a>
           <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Solder son compte</a>
           <a href="#" [routerLink]="['/campus']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les campus</a>
@@ -22,11 +22,11 @@
           <i class="fa fa-user-o"></i><span style="margin-left: 0.5em;" class="d-none d-md-inline">Etudiant</span>
         </a>
         <div class="collapse" id="menuEtudiant" data-parent="#sidebar">
-          <a href="#" [routerLink]="['/admin/users']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les utilisateurs</a>
+          <a href="#" [routerLink]="['/users']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les utilisateurs</a>
           <a href="#" [routerLink]="['/admin/users/update']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Modifier son compte</a>
           <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Lister mes projets</a>
           <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Créer un projet</a>
-          <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Poser une question</a>
+          <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Effectuer une demande</a>
         </div>
 
         <!--Menu admin-->

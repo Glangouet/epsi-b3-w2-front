@@ -21,6 +21,7 @@
     <div class="form-group col-md-4">
       <label for="description">Description du projet:</label>
       <textarea type="text"
+                style="resize: none;"
                 class="form-control"
                 rows="5"
                 id="description"
@@ -30,7 +31,7 @@
       </textarea>
     </div>
     <div class="form-group col-md-4">
-      <label for="partners">Partenaires:</label>
+      <label for="partners">Equipiers:</label>
       <br />
       <ul class="col-md-4">
         <li *ngFor="let partner of project.partners">{{ partner.username }}</li>
@@ -50,9 +51,6 @@
                  [(ngModel)]="project.startDate"
                  placeholder="yyyy-mm-dd"
                  readonly />
-          <span class="input-group-addon">
-            <span class="fa fa-calendar"></span>
-          </span>
         </div>
       </div>
     </div>
@@ -68,9 +66,6 @@
                  [(ngModel)]="project.endDate"
                  placeholder="yyyy-mm-dd"
                  readonly />
-          <span class="input-group-addon">
-            <span class="fa fa-calendar"></span>
-          </span>
         </div>
       </div>
     </div>
@@ -87,9 +82,6 @@
                  [(ngModel)]="project.creationDate"
                  placeholder="yyyy-mm-dd"
                  readonly />
-          <span class="input-group-addon">
-            <span class="fa fa-calendar"></span>
-          </span>
         </div>
       </div>
     </div>
