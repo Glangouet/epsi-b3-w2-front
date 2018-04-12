@@ -20,26 +20,22 @@
     </div>
     <div class="form-group col-md-4">
       <label for="description">Description du projet:</label>
-      <input type="text"
-             class="form-control"
-             id="description"
-             name="description"
-             readonly
-             value="{{project.description}}">
+      <textarea type="text"
+                class="form-control"
+                rows="5"
+                id="description"
+                name="description"
+                readonly
+                value="{{project.description}}">
+      </textarea>
     </div>
     <div class="form-group col-md-4">
       <label for="partners">Partenaires:</label>
       <br />
+      <ul class="col-md-4">
+        <li *ngFor="let partner of project.partners">{{ partner.username }}</li>
+      </ul>
 
-      <select id="partners"
-              #partners="ngModel"
-              name="partners"
-              [(ngModel)]="project.partners" multiple
-              disabled
-              class="w-100"
-              >
-        <option *ngFor="let partner of project.partners" value="{{partner.id}}">{{ partner.username }}</option>>
-      </select>
     </div>
 
     <div class="form-group col-md-4">
