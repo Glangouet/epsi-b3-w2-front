@@ -7,9 +7,9 @@
           <span class="d-none d-md-inline">Projects</span>
         </a>
         <div class="collapse" id="menu1" data-parent="#sidebar">
-            <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menu1">All projects</a>
-            <a href="#" [routerLink]="['/my-projects']" class="list-group-item sousMenu" data-parent="#menu1">My projects</a>
-            <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menu1">Create project</a>
+          <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menu1">All projects</a>
+          <a href="#" [routerLink]="['/my-projects']" class="list-group-item sousMenu" data-parent="#menu1">My projects</a>
+          <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menu1">Create project</a>
         </div>
         <a href="#menu3" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
           <i class="fa fa-user-o"></i><span style="margin-left: 0.5em;" class="d-none d-md-inline">User</span>
@@ -25,6 +25,10 @@
           <a href="#" [routerLink]="['/admin/users']" class="list-group-item sousMenu" data-parent="#menu4">User list</a>
           <a href="#" [routerLink]="['/admin/users/create']" class="list-group-item sousMenu" data-parent="#menu4">Create user</a>
         </div>
+        <a href="#" [routerLink]="['/login']" class="list-group-item">
+          <i class="fa fa-dashboard"></i>
+          <span class="d-none d-md-inline">Login</span>
+        </a>
       </div>
     </div>    
   </div>

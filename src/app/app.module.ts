@@ -22,7 +22,11 @@ import { UserCreateComponent } from './admin/user-create/user-create.component';
 import { UserUpdateComponent } from './admin/user-update/user-update.component';
 import { ProjectMyComponent } from './project/project-my/project-my.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { CampusService } from './services/campus.service';
+import { SkillService } from './services/skill.service';
+import { RoleService } from './services/role.service';
 
 
 @NgModule({
@@ -43,7 +47,8 @@ import {FormsModule} from '@angular/forms';
     UserUpdateComponent,
     UserViewComponent,
     ProjectMyComponent,
-    UserListComponent
+    UserListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,10 @@ import {FormsModule} from '@angular/forms';
   providers: [
       AuthService,
       UserService,
-      ProjectService
+      ProjectService,
+      CampusService,
+      SkillService,
+      RoleService
   ],
   bootstrap: [AppComponent]
 })
