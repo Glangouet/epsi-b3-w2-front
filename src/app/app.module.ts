@@ -33,6 +33,7 @@ import { SkillCreateComponent } from './skill/skill-create/skill-create.componen
 import { SkillUpdateComponent } from './skill/skill-update/skill-update.component';
 import { RoleCreateComponent } from './role/role-create/role-create.component';
 import { RoleUpdateComponent } from './role/role-update/role-update.component';
+import {CustomDatePipe} from './pipes/custom-date.pipe';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { RoleUpdateComponent } from './role/role-update/role-update.component';
     SkillCreateComponent,
     SkillUpdateComponent,
     RoleCreateComponent,
-    RoleUpdateComponent
+    RoleUpdateComponent,
+    CustomDatePipe
   ],
   imports: [
     BrowserModule,
