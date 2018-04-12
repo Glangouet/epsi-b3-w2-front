@@ -14,6 +14,12 @@ import {ProjectMyComponent} from './project/project-my/project-my.component';
 import {UserListComponent} from './admin/user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { CampusCreateComponent } from './campus/campus-create/campus-create.component';
+import { CampusUpdateComponent } from './campus/campus-update/campus-update.component';
+import { SkillCreateComponent } from './skill/skill-create/skill-create.component';
+import { SkillUpdateComponent } from './skill/skill-update/skill-update.component';
+import { RoleCreateComponent } from './role/role-create/role-create.component';
+import { RoleUpdateComponent } from './role/role-update/role-update.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -29,6 +35,13 @@ const appRoutes: Routes = [
     { path: 'admin/users', component: UserListComponent },
     { path: 'admin/users/create', component: UserCreateComponent},
     { path: 'admin/users/view/:id', component: UserUpdateComponent },
+    { path: 'campus/create', component: CampusCreateComponent },
+    { path: 'campus/update', component: CampusUpdateComponent },
+    { path: 'skill/create', component: SkillCreateComponent },
+    { path: 'skill/update', component: SkillUpdateComponent },
+    { path: 'role/create', component: RoleCreateComponent },
+    { path: 'role/update', component: RoleUpdateComponent },
+    
 ];
 
 @NgModule({
