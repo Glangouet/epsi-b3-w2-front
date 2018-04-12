@@ -49,6 +49,7 @@ const appRoutes: Routes = [
     { path: 'help-request/create', component: CreateHelpRequestComponent },
     { path: 'users', component: UserComponent},
     { path: 'users/:id', component: UserViewComponent },
+    { path: 'admin', component: AdminComponent },
     { path: 'admin/users', component: UserListComponent },
     { path: 'admin/users/create', component: UserCreateComponent },
     { path: 'admin/users/update/:id', component: UserUpdateComponent },

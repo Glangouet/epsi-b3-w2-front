@@ -15,7 +15,7 @@
                  [(ngModel)]="project.name">
         </div>
         <div class="form-group">
-          <label for="description">Description of project:</label>
+          <label for="description">Description du projet:</label>
           <input type="text"
                  class="form-control"
                  id="description"
@@ -23,10 +23,11 @@
                  name="description"
                  [(ngModel)]="project.description">
         </div>
+        <label for="partners">Equipiers:</label>
         <div class="form-group">
-          <label for="partners">Select partners</label>
           <select id="partners"
                   #partners="ngModel"
+                  class="col-md-6"
                   name="partners"
                   [(ngModel)]="project.partners" multiple>
             <option *ngFor="let partnertes of partnerstest" [ngValue]="partnertes.id">{{partnertes.username}}</option>
@@ -42,7 +43,7 @@
                      #dateStart="ngModel"
                      name="dateStart"
                      [(ngModel)]="project.dateStart"
-                     placeholder="yyyy-mm-dd"/>
+                     placeholder="yyyy-mm-dd" />
               <span class="input-group-addon">
                 <span class="fa fa-calendar"></span>
               </span>
@@ -59,14 +60,14 @@
                      #dateEnd="ngModel"
                      name="dateEnd"
                      [(ngModel)]="project.dateEnd"
-                     placeholder="yyyy-mm-dd"/>
+                     placeholder="yyyy-mm-dd" />
               <span class="input-group-addon">
                 <span class="fa fa-calendar"></span>
               </span>
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Créer</button>
       </form>
     </div>
   </div>

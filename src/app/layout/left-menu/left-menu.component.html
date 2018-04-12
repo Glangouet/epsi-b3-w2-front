@@ -1,74 +1,62 @@
 <div class="container-fluid">
   <div class="row d-flex d-md-block flex-nowrap wrapper">
     <div class="col-md-2 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar" style="max-height: calc(100vh - 50px);overflow-y: scroll; overflow: auto;">
-        <div class="list-group border-0 card text-center text-md-left" style="min-width: 50px !important;">
-            <a [routerLink]="['/']" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-home"></i> <span class="d-none d-md-inline">Accueil</span></a>
-            
+      <div class="list-group border-0 card text-center text-md-left" style="min-width: 50px !important;">
+        <a [routerLink]="['/']" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-home"></i> <span class="d-none d-md-inline">Accueil</span></a>
 
-            <a href="#menuProfesseur" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
-                <i class="fa fa-user-o"></i><span style="margin-left: 0.5em;" class="d-none d-md-inline">Professeur</span>
-            </a>
-            <div class="collapse" id="menuProfesseur" data-parent="#sidebar">
-                <a href="#" [routerLink]="['/admin/users']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les utilisateurs</a>
-                <a href="#" [routerLink]="['/admin/users/update']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Modifier son compte</a>
-                <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Solder son compte</a>
-                <a href="#" [routerLink]="['/campus']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les campus</a>
-                <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les projets</a>
-                <a href="#" [routerLink]="['/help-request']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Liste des demandes d'aide</a>
-            </div>
-
-            <!--Menu étudiant-->
-            <a href="#menuEtudiant" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
-                <i class="fa fa-user-o"></i><span style="margin-left: 0.5em;" class="d-none d-md-inline">Etudiant</span>
-            </a>
-            <div class="collapse" id="menuEtudiant" data-parent="#sidebar">
-                <a href="#" [routerLink]="['/admin/users/update']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Modifier son compte</a>
-                <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Lister mes projets</a>
-                <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Créer un projet</a>
-                <a href="#" [routerLink]="['/help-request/create']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Créer une demande</a>
-            </div>
-
-            <!--Menu admin-->
-            <a href="#menuAdmin" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
-                <i class="fa fa-dashboard"></i>
-                <span class="d-none d-md-inline">Admin</span>
-            </a>
-            <div class="collapse" id="menuAdmin" data-parent="#sidebar">
-                <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menu5">Activité</a>
-
-                <a href="#" [routerLink]="['/admin/users']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les utilisateurs</a>
-                <a href="#" [routerLink]="['/admin/users/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un utilisateur</a>
-                <a href="#" [routerLink]="['/admin/users/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un utilisateur</a>
-
-                <a href="#" [routerLink]="['/campus']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les campus</a>
-                <a href="#" [routerLink]="['/campus/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un campus</a>
-                <a href="#" [routerLink]="['/campus/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un campus</a>
-
-                <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les projets</a>
-                <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un projet</a>
-                <a href="#" [routerLink]="['/projects/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un projet</a>
-
-                <a href="#" [routerLink]="['/roles']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les rôles</a>
-                <a href="#" [routerLink]="['/roles/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un rôle</a>
-                <a href="#" [routerLink]="['/roles/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un rôle</a>
-
-                <a href="#" [routerLink]="['/skills']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les compétences</a>
-                <a href="#" [routerLink]="['/skills/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer une compétence</a>
-                <a href="#" [routerLink]="['/skills/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier une compétence</a>
-
-                <a href="#" [routerLink]="['/roles']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les rôles</a>
-                <a href="#" [routerLink]="['/roles/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un rôle</a>
-                <a href="#" [routerLink]="['/roles/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un rôle</a>
-
-                <a href="#" [routerLink]="['/roles']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les rôles</a>
-                <a href="#" [routerLink]="['/roles/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un rôle</a>
-                <a href="#" [routerLink]="['/roles/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un rôle</a>
-
-                <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créditer un projet</a>
-                <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Solder un professeur</a>
-            </div>
-           
+        <!--Menu prof-->
+        <a href="#menuProfesseur" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
+          <i class="fa fa-user-o"></i><span style="margin-left: 0.5em;" class="d-none d-md-inline">Professeur</span>
+        </a>
+        <div class="collapse" id="menuProfesseur" data-parent="#sidebar">
+          <a href="#" [routerLink]="['/users']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les utilisateurs</a>
+          <a href="#" [routerLink]="['/']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Modifier son compte</a>
+          <a href="#" [routerLink]="['/']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Solder son compte</a>
+          <a href="#" [routerLink]="['/']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les campus</a>
+          <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Lister les projets</a>
+          <a href="#" [routerLink]="['/help-request']" class="list-group-item sousMenu" data-parent="#menuProfesseur">Liste des demandes d'aide</a>
         </div>
+
+        <!--Menu étudiant-->
+        <a href="#menuEtudiant" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
+          <i class="fa fa-user-o"></i><span style="margin-left: 0.5em;" class="d-none d-md-inline">Etudiant</span>
+        </a>
+        <div class="collapse" id="menuEtudiant" data-parent="#sidebar">
+          <a href="#" [routerLink]="['/users']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les utilisateurs</a>
+          <a href="#" [routerLink]="['/']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Modifier son compte</a>
+          <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Lister mes projets</a>
+          <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Créer un projet</a>
+          <a href="#" [routerLink]="['/help-request/create']" class="list-group-item sousMenu" data-parent="#menuEtudiant">Effectuer une demande</a>
+        </div>
+
+        <!--Menu admin-->
+        <a href="#menuAdmin" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
+          <i class="fa fa-dashboard"></i>
+          <span class="d-none d-md-inline">Admin</span>
+        </a>
+        <div class="collapse" id="menuAdmin" data-parent="#sidebar">
+          <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menu5">Activité</a>
+
+          <a href="#" [routerLink]="['/admin/users']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les utilisateurs</a>
+          <a href="#" [routerLink]="['/admin/users/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un utilisateur</a>
+
+          <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les campus</a>
+          <a href="#" [routerLink]="['/campus/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un campus</a>
+
+          <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les projets</a>
+          <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un projet</a>
+
+          <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les rôles</a>
+          <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un rôle</a>
+
+          <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les compétences</a>
+          <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer une compétence</a>
+
+          <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créditer un projet</a>
+          <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Solder un professeur</a>
+        </div>
+
+      </div>
     </div>    
   </div>
 </div>
