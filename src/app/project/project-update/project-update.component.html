@@ -30,8 +30,9 @@
                 #partners="ngModel"
                 name="partners"
                 [(ngModel)]="project.partners" multiple>
-          <option *ngFor="let partner of project.partners" [ngValue]="partner.id">{{partner.username}}</option>
+          <option *ngFor="let partner of userList" [ngValue]="partner.id">{{partner.username}}</option>
         </select>
+        <br />
       </div>
       <div class="form-group">
         <label for="dateStart">Date de début du projet:</label>

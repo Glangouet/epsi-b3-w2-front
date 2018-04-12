@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../class/project';
 import {ActivatedRoute} from '@angular/router';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-project-update',
@@ -10,12 +11,15 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ProjectUpdateComponent implements OnInit {
 
-    private projectId: any;
-    private project: Project;
+  private project: Project;
+  private userList: any;
 
-  constructor(private projectService: ProjectService, private route: ActivatedRoute) { }
+  constructor(private projectService: ProjectService, private route: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getUsersByRole(null, data => {
+      this.userList = data;
+    });
     this.project = new Project();
     this.route.params.subscribe(params => this.project.id = params.id);
     this.projectService.getProjectById(this.project.id, data => {
@@ -25,6 +29,7 @@ export class ProjectUpdateComponent implements OnInit {
       this.project.description  = data['description'];
       this.project.partners     = data['partners'];
     });
+    console.log(this.project);
   }
 
   public updateProject() {
