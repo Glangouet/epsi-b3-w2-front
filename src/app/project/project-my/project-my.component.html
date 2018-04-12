@@ -29,9 +29,9 @@
             <li *ngFor="let partner of project.partners">{{ partner.username }}</li>
           </ul>
         </td>
-        <td>{{ project.startDate }}</td>
-        <td>{{ project.endDate }}</td>
-        <td>{{ project.creationDate }}</td>
+        <td>{{ project.startDate | customDate }}</td>
+        <td>{{ project.endDate | customDate }}</td>
+        <td>{{ project.creationDate | customDate }}</td>
         <td><button class="btn btn-sm btn-warning"><i class="fa fa-wrench"></i></button></td>
         <td><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
       </tr>
