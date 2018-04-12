@@ -30,7 +30,6 @@ const appRoutes: Routes = [
     { path: 'projects/update/:id', component: ProjectUpdateComponent },
     { path: 'projects/view/:id', component: ProjectViewComponent},
     { path: 'help-request', component: HelpRequestComponent },
-    { path: 'projects/help-request', component: HelpRequestComponent },
     { path: 'users', component: UserComponent},
     { path: 'users/:id', component: UserViewComponent},
     { path: 'admin', component: AdminComponent },

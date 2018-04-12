@@ -36,6 +36,7 @@ import { RoleUpdateComponent } from './role/role-update/role-update.component';
 import {CustomDatePipe} from './pipes/custom-date.pipe';
 import { HelpRequestComponent } from './help-request/help-request.component';
 import { CreateHelpRequestComponent } from './help-request/create-help-request/create-help-request.component';
+import {HelpRequestService} from './services/help-request.service';
 
 
 @NgModule({
@@ -80,7 +81,8 @@ import { CreateHelpRequestComponent } from './help-request/create-help-request/c
       ProjectService,
       CampusService,
       SkillService,
-      RoleService
+      RoleService,
+      HelpRequestService
   ],
   bootstrap: [AppComponent]
 })

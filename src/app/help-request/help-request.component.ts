@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HelpRequestService} from '../services/help-request.service';
 
 @Component({
   selector: 'app-help-request',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpRequestComponent implements OnInit {
 
-  constructor() { }
+  private helpRequests: any;
+
+  constructor(private helpRequestService: HelpRequestService) { }
 
   ngOnInit() {
+    this.helpRequestService.getAll(data => {
+      this.helpRequests = data;
+    });
   }
 
 }
