@@ -7,6 +7,7 @@ import 'rxjs/operator/toPromise';
 import 'rxjs/operator/find';
 import {Router} from '@angular/router';
 import {User} from '../class/user';
+import {UserService} from './user.service';
 
 declare const $;
 
@@ -15,6 +16,7 @@ declare const $;
 export class AuthService {
     private apiUrl;
     private isConnected: boolean;
+    private sessionUsername: string;
 
     constructor(private http: HttpClient, private router: Router) {
         this.apiUrl = 'http://localhost:8002';
@@ -86,6 +88,7 @@ export class AuthService {
             this.updateToken(tokens);
             this.isConnected = true;
             localStorage.setItem('username', user['login']);
+            this.sessionUsername = user['login'];
         });
     }
 

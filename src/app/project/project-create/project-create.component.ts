@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectService} from '../../services/project.service';
 import {Project} from '../../class/project';
+import {User} from '../../class/user';
+import {UserService} from '../../services/user.service';
+
 
 @Component({
   selector: 'app-project-create',
@@ -10,11 +13,15 @@ import {Project} from '../../class/project';
 export class ProjectCreateComponent implements OnInit {
 
   private project: Project;
+  private partnerstest: any;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private userService: UserService) { }
 
   ngOnInit() {
     this.project = new Project();
+    this.userService.getUsersByRole(null, data => {
+        this.partnerstest = data;
+    });
   }
 
   public addProject() {
@@ -24,6 +31,5 @@ export class ProjectCreateComponent implements OnInit {
       this.project = new Project();
     });
   }
-
 
 }

@@ -30,7 +30,7 @@
                   #partners="ngModel"
                   name="partners"
                   [(ngModel)]="project.partners" multiple>
-            <option value="1">Guillaume</option>
+            <option *ngFor="let partnertes of partnerstest" [ngValue]="partnertes.id">{{partnertes.username}}</option>
           </select>
         </div>
         <div class="form-group">

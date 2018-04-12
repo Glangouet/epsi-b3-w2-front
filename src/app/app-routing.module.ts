@@ -23,7 +23,6 @@ import { RoleUpdateComponent } from './role/role-update/role-update.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'login', component: LoginComponent },
     { path: 'projects', component: ProjectComponent },
     { path: 'my-projects', component: ProjectMyComponent },
     { path: 'projects/create', component: ProjectCreateComponent },
@@ -41,7 +40,6 @@ const appRoutes: Routes = [
     { path: 'skill/update', component: SkillUpdateComponent },
     { path: 'role/create', component: RoleCreateComponent },
     { path: 'role/update', component: RoleUpdateComponent },
-    
 ];
 
 @NgModule({

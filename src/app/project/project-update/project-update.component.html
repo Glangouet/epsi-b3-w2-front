@@ -5,32 +5,69 @@
 <hr>
 <div class="row">
   <div class="col-lg-12">
-    <form action="/action_page.php" style="max-width: 700px;" class="mx-auto">
+    <form (ngSubmit)="updateProject(projectForm)" #projectForm="ngForm" enctype="multipart/form-data" style="max-width: 700px;" class="mx-auto">
       <div class="form-group">
         <label for="name">Name of project:</label>
-        <input type="text" class="form-control" id="name">
+        <input type="text"
+               class="form-control"
+               id="name"
+               #name="ngModel"
+               name="name"
+               [(ngModel)]="project.name">
       </div>
       <div class="form-group">
         <label for="description">Description of project:</label>
-        <input type="text" class="form-control" id="description">
+        <input type="text"
+               class="form-control"
+               id="description"
+               #description="ngModel"
+               name="description"
+               [(ngModel)]="project.description">
       </div>
       <div class="form-group">
-        <label for="users">Select partners</label>
-        <input type="text" class="form-control" id="users">
+        <label for="partners">Select partners</label>
+        <select id="partners"
+                #partners="ngModel"
+                name="partners"
+                [(ngModel)]="project.partners" multiple>
+          <option *ngFor="let partner of project.partners" [ngValue]="partner.id">{{partner.username}}</option>
+        </select>
       </div>
       <div class="form-group">
-        <label for="date-start">Date de début du projet:</label>
-        <input type="text" class="form-control" id="date-start">
+        <label for="dateStart">Date de début du projet:</label>
+        <div class="form-group">
+          <div class='input-group'>
+            <input type='text'
+                   class="form-control"
+                   id="dateStart"
+                   #dateStart="ngModel"
+                   name="dateStart"
+                   [(ngModel)]="project.dateStart"
+                   placeholder="yyyy-mm-dd"/>
+            <span class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </span>
+          </div>
+        </div>
       </div>
       <div class="form-group">
-        <label for="date-start">Date de fin du projet:</label>
-        <input type="text" class="form-control" id="date-end">
+        <label for="dateEnd">Date de fin du projet:</label>
+        <div class="form-group">
+          <div class='input-group'>
+            <input type='text'
+                   class="form-control"
+                   id="dateEnd"
+                   #dateEnd="ngModel"
+                   name="dateEnd"
+                   [(ngModel)]="project.dateEnd"
+                   placeholder="yyyy-mm-dd"/>
+            <span class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </span>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="token">Number of token:</label>
-        <input type="number" class="form-control" id="token">
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" (click)="updateProject()" class="btn btn-primary">Submit</button>
     </form>
   </div>
 </div>

@@ -5,9 +5,9 @@ import {
   HttpEvent,
   HttpInterceptor
 } from '@angular/common/http';
-import { AuthService } from './auth.service';
 import {tokenNotExpired} from 'angular2-jwt';
 import {Observable} from 'rxjs/Observable';
+import {AuthService} from './auth.service';
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {

@@ -25,7 +25,7 @@ export class ProjectService {
 
   public deleteProject(id, callback) {
     this.http.delete(
-        this.authService.getApiUrl() + '/project/delete/' + id
+        this.authService.getApiUrl() + '/api/project/delete/' + id
     ).subscribe(
         data => {
             callback(data);
@@ -38,7 +38,7 @@ export class ProjectService {
 
   public updateProject(project: Project, callback) {
       this.http.put(
-          this.authService.getApiUrl() + '/project/update',
+          this.authService.getApiUrl() + '/api/project/update',
           project
       ).subscribe(
           data => {
@@ -78,7 +78,7 @@ export class ProjectService {
 
   public getProjectsByUserId(userId, callback) {
       this.http.get(
-          this.authService.getApiUrl() + '/project/get-by-user-id/' + userId
+          this.authService.getApiUrl() + '/api/project/get-by-user-id/' + userId
       ).subscribe(
           data => {
               callback(data);

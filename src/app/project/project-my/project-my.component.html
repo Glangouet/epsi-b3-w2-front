@@ -15,12 +15,13 @@
         <th scope="col">Start date</th>
         <th scope="col">End date</th>
         <th scope="col">Creation date</th>
+        <th scope="col">View</th>
         <th scope="col">update</th>
         <th scope="col">delete</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let project of projects;" [routerLink]="['/projects/view/', project.id]" style="cursor: pointer;">
+      <tr *ngFor="let project of projects;">
         <td>{{ project.id }}</td>
         <td>{{ project.name }}</td>
         <td>{{ project.description }}</td>
@@ -32,7 +33,8 @@
         <td>{{ project.startDate | customDate }}</td>
         <td>{{ project.endDate | customDate }}</td>
         <td>{{ project.creationDate | customDate }}</td>
-        <td><button class="btn btn-sm btn-warning"><i class="fa fa-wrench"></i></button></td>
+        <td><button class="btn btn-sm btn-primary" [routerLink]="['/projects/view/', project.id]" ><i class="fa fa-eye"></i></button></td>
+        <td><button class="btn btn-sm btn-warning" [routerLink]="['/projects/update/', project.id]"><i class="fa fa-wrench"></i></button></td>
         <td><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
       </tr>
       </tbody>

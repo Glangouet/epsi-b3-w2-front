@@ -7,10 +7,12 @@
   <ul class="navbar-nav px-3" style="margin-right: 0px; margin-left: auto;">
     <li style="margin:auto"><span class="text-primary"><i class="fa fa-user-circle"></i></span></li>
     <li class="nav-item dropdown">
-      <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://example.com" id="dropdown03">Prénom Nom</a>
+      <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://example.com" id="dropdown03">
+        {{ authService.getUsername() }}
+      </a>
       <div aria-labelledby="dropdown03" class="dropdown-menu dropdown-menu-right">
         <a class="dropdown-item" href="#">Profil</a>
-        <a class="dropdown-item" href="#">Déconnexion</a>
+        <a class="dropdown-item" (click)="logout()">Déconnexion</a>
       </div>
     </li>
   </ul>
