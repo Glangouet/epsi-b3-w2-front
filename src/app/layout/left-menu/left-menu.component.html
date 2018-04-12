@@ -3,10 +3,7 @@
     <div class="col-md-2 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar" style="max-height: calc(100vh - 50px);overflow-y: scroll; overflow: auto;">
         <div class="list-group border-0 card text-center text-md-left" style="min-width: 50px !important;">
             <a [routerLink]="['/']" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-home"></i> <span class="d-none d-md-inline">Accueil</span></a>
-            <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
-                <i class="fa fa-clipboard"></i>
-                <span class="d-none d-md-inline">Projets</span>
-            </a>
+            
 
             <a href="#menuProfesseur" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false">
                 <i class="fa fa-user-o"></i><span style="margin-left: 0.5em;" class="d-none d-md-inline">Professeur</span>
@@ -42,37 +39,30 @@
                 <a href="#" [routerLink]="['/admin/users']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les utilisateurs</a>
                 <a href="#" [routerLink]="['/admin/users/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un utilisateur</a>
                 <a href="#" [routerLink]="['/admin/users/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un utilisateur</a>
-                <a href="#" [routerLink]="['/admin/users/delete']" class="list-group-item sousMenu" data-parent="#menuAdmin">Supprimer un utilisateur</a>
 
                 <a href="#" [routerLink]="['/campus']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les campus</a>
                 <a href="#" [routerLink]="['/campus/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un campus</a>
                 <a href="#" [routerLink]="['/campus/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un campus</a>
-                <a href="#" [routerLink]="['/campus/delete']" class="list-group-item sousMenu" data-parent="#menuAdmin">Supprimer un campus</a>
 
                 <a href="#" [routerLink]="['/projects']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les projets</a>
                 <a href="#" [routerLink]="['/projects/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un projet</a>
                 <a href="#" [routerLink]="['/projects/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un projet</a>
-                <a href="#" [routerLink]="['/projects/delete']" class="list-group-item sousMenu" data-parent="#menuAdmin">Supprimer un projet</a>
 
                 <a href="#" [routerLink]="['/roles']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les rôles</a>
                 <a href="#" [routerLink]="['/roles/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un rôle</a>
                 <a href="#" [routerLink]="['/roles/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un rôle</a>
-                <a href="#" [routerLink]="['/roles/delete']" class="list-group-item sousMenu" data-parent="#menuAdmin">Supprimer un rôle</a>
 
                 <a href="#" [routerLink]="['/skills']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les compétences</a>
                 <a href="#" [routerLink]="['/skills/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer une compétence</a>
                 <a href="#" [routerLink]="['/skills/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier une compétence</a>
-                <a href="#" [routerLink]="['/skills/delete']" class="list-group-item sousMenu" data-parent="#menuAdmin">Supprimer une compétence</a>
 
                 <a href="#" [routerLink]="['/roles']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les rôles</a>
                 <a href="#" [routerLink]="['/roles/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un rôle</a>
                 <a href="#" [routerLink]="['/roles/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un rôle</a>
-                <a href="#" [routerLink]="['/roles/delete']" class="list-group-item sousMenu" data-parent="#menuAdmin">Supprimer un rôle</a>
 
                 <a href="#" [routerLink]="['/roles']" class="list-group-item sousMenu" data-parent="#menuAdmin">Lister les rôles</a>
                 <a href="#" [routerLink]="['/roles/create']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créer un rôle</a>
                 <a href="#" [routerLink]="['/roles/update']" class="list-group-item sousMenu" data-parent="#menuAdmin">Modifier un rôle</a>
-                <a href="#" [routerLink]="['/roles/delete']" class="list-group-item sousMenu" data-parent="#menuAdmin">Supprimer un rôle</a>
 
                 <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Créditer un projet</a>
                 <a href="#" [routerLink]="['/admin']" class="list-group-item sousMenu" data-parent="#menuAdmin">Solder un professeur</a>
