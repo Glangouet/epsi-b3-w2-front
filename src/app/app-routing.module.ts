@@ -12,10 +12,11 @@ import {UserCreateComponent} from './admin/user-create/user-create.component';
 import {UserUpdateComponent} from './admin/user-update/user-update.component';
 import {ProjectMyComponent} from './project/project-my/project-my.component';
 import {UserListComponent} from './admin/user-list/user-list.component';
-import {FormsModule} from '@angular/forms';
+import {LoginComponent} from './login/login.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
+    { path: 'login', component: LoginComponent },
     { path: 'projects', component: ProjectComponent },
     { path: 'my-projects', component: ProjectMyComponent },
     { path: 'projects/create', component: ProjectCreateComponent },
