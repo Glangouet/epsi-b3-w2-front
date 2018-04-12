@@ -31,6 +31,7 @@ import { SkillDeleteComponent } from './skill/skill-delete/skill-delete.componen
 
 import { RoleCreateComponent } from './role/role-create/role-create.component';
 import { RoleUpdateComponent } from './role/role-update/role-update.component';
+import {HelpRequestComponent} from './help-request/help-request.component';
 import { RoleDeleteComponent } from './role/role-delete/role-delete.component';
 
 const appRoutes: Routes = [
@@ -41,12 +42,10 @@ const appRoutes: Routes = [
     { path: 'projects/view/:id', component: ProjectViewComponent},
     { path: 'my-projects', component: ProjectMyComponent },
     { path: 'projects/create', component: ProjectCreateComponent },
-  { path: 'projects/update/:id', component: ProjectUpdateComponent },
-  //{ path: 'projects/delete/:id', component: ProjectDeleteComponent },
-  
-  { path: 'admin', component: AdminComponent },
-    { path: 'admin/users/view/:id', component: UserUpdateComponent },
-
+    { path: 'projects/update/:id', component: ProjectUpdateComponent },
+    { path: 'projects/view/:id', component: ProjectViewComponent},
+    { path: 'help-request', component: HelpRequestComponent },
+    { path: 'projects/help-request', component: HelpRequestComponent },
     { path: 'users', component: UserComponent},
     { path: 'users/:id', component: UserViewComponent },
     { path: 'admin/users', component: UserListComponent },
