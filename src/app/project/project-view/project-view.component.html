@@ -1,26 +1,103 @@
 <div class="page-header">
-  <h2>View project</h2>
+  <h2>Projet: {{ project.name}}</h2>
 </div>
-<p class="lead">{{ project.name}}</p>
 <hr>
+
+
+
+
 <div class="row">
   <div class="col-lg-12">
-    Description: {{ project.description }}
-    <br />
-    start date: {{ project.startDate}}
-    <br />
-    end date: {{ project.endDate }}
-    <br />
-    creation date: {{ project.creationDate }}
-    <br />
-    partners:
-    <ul>
-      <li *ngFor="let partner of project.partners">{{ partner.username }}</li>
-    </ul>
-    <br />
-    Comments:
-    <ul>
-      <li *ngFor="let comment of project.comments">{{ comment.content }}</li>
-    </ul>
+
+    <div class="form-group col-md-4">
+      <label for="name">Nom du projet:</label>
+      <input type="text"
+             class="form-control"
+             id="name"
+             name="name"
+             readonly
+             value="{{project.name}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="description">Description du projet:</label>
+      <input type="text"
+             class="form-control"
+             id="description"
+             name="description"
+             readonly
+             value="{{project.description}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="partners">Partenaires:</label>
+      <br />
+
+      <select id="partners"
+              #partners="ngModel"
+              name="partners"
+              [(ngModel)]="project.partners" multiple
+              disabled
+              class="w-100"
+              >
+        <option *ngFor="let partner of project.partners" value="{{partner.id}}">{{ partner.username }}</option>>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="startDate">Date de début du projet:</label>
+      <div class="form-group">
+        <div class='input-group'>
+          <input type='text'
+                 class="form-control"
+                 id="startDate"
+                 #dateStart="ngModel"
+                 name="startDate"
+                 [(ngModel)]="project.startDate"
+                 placeholder="yyyy-mm-dd"
+                 readonly />
+          <span class="input-group-addon">
+            <span class="fa fa-calendar"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="endDate">Date de fin du projet:</label>
+      <div class="form-group">
+        <div class='input-group'>
+          <input type='text'
+                 class="form-control"
+                 id="endDate"
+                 #dateEnd="ngModel"
+                 name="endDate"
+                 [(ngModel)]="project.endDate"
+                 placeholder="yyyy-mm-dd"
+                 readonly />
+          <span class="input-group-addon">
+            <span class="fa fa-calendar"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="creationDate">Date de création du projet:</label>
+      <div class="form-group">
+        <div class='input-group'>
+          <input type='text'
+                 class="form-control"
+                 id="creationDate"
+                 #dateEnd="ngModel"
+                 name="creationDate"
+                 [(ngModel)]="project.creationDate"
+                 placeholder="yyyy-mm-dd"
+                 readonly />
+          <span class="input-group-addon">
+            <span class="fa fa-calendar"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>

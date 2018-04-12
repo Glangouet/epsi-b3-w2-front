@@ -1,77 +1,22 @@
 <div class="page-header">
-  <h2>Project user</h2>
+  <h2>Supprimer un utilisateur</h2>
 </div>
-<p class="lead">Here, you can create a user.</p>
 <hr>
 <div class="row">
   <div class="col-lg-12">
     <form (ngSubmit)="addUser(userForm)" #userForm="ngForm" enctype="multipart/form-data" style="max-width: 700px;" class="mx-auto">
+      
       <div class="form-group">
-        <label for="login">Login:</label>
-        <input type="text"
-               class="form-control"
-               id="login"
-               #name="ngModel"
-               name="login"
-               [(ngModel)]="user.login">
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password"
-               class="form-control"
-               id="password"
-               #name="ngModel"
-               name="password"
-               [(ngModel)]="user.password">
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email"
-               class="form-control"
-               id="email"
-               #name="ngModel"
-               name="email"
-               [(ngModel)]="user.email">
-      </div>
-      <div class="form-group">
-        <label for="firstname">Firstname:</label>
-        <input type="text"
-               class="form-control"
-               id="firstname"
-               #name="ngModel"
-               name="firstname"
-               [(ngModel)]="user.firstname">
-      </div>
-      <div class="form-group">
-        <label for="lastname">Lastname:</label>
-        <input type="text"
-               class="form-control"
-               id="lastname"
-               #name="ngModel"
-               name="lastname"
-               [(ngModel)]="user.lastname">
-      </div>
-      <div class="form-group">
-        <label for="skills">Skills:</label>
-        <select id="skills"
+        <label for="user">Utilisateur:</label>
+        <select id="user"
                 #name="ngModel"
-                name="skills"
-                [(ngModel)]="user.skills"
+                name="user"
+                [(ngModel)]="user.id"
                 multiple>
           <option>Hellow world</option>
         </select>
       </div>
-      <div class="form-group">
-        <label for="roles">Roles:</label>
-        <select id="roles"
-                #name="ngModel"
-                name="roles"
-                [(ngModel)]="user.roles"
-                multiple>
-          <option>Hellow world</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-primary"><i class="fa fa-arrow"></i> Submit</button>
+      <button type="submit" class="btn btn-primary"><i class="fa fa-arrow"></i> Supprimer</button>
     </form>
   </div>
 </div>
