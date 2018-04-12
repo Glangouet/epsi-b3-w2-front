@@ -9,8 +9,9 @@ export class ProjectService {
   constructor(private http: HttpClient, private authService: AuthService) { }
 
   public createProject(project: Project, callback) {
+      console.log(project);
       this.http.post(
-          this.authService.getApiUrl() + '/project/create',
+          this.authService.getApiUrl() + '/api/project/add',
           project
       ).subscribe(
           data => {
@@ -64,7 +65,7 @@ export class ProjectService {
 
   public getProjectById(id, callback) {
       this.http.get(
-          this.authService.getApiUrl() + '/project/get-by-id/' + id
+          this.authService.getApiUrl() + '/api/project/get-by-id/' + id
       ).subscribe(
           data => {
               callback(data);

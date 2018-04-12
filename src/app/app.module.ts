@@ -66,7 +66,7 @@ import { RoleUpdateComponent } from './role/role-update/role-update.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
       AuthService,
