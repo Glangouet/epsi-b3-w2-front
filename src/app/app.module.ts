@@ -34,6 +34,8 @@ import { SkillUpdateComponent } from './skill/skill-update/skill-update.componen
 import { RoleCreateComponent } from './role/role-create/role-create.component';
 import { RoleUpdateComponent } from './role/role-update/role-update.component';
 import {CustomDatePipe} from './pipes/custom-date.pipe';
+import { HelpRequestComponent } from './help-request/help-request.component';
+import { CreateHelpRequestComponent } from './help-request/create-help-request/create-help-request.component';
 
 
 @NgModule({
@@ -62,7 +64,9 @@ import {CustomDatePipe} from './pipes/custom-date.pipe';
     SkillUpdateComponent,
     RoleCreateComponent,
     RoleUpdateComponent,
-    CustomDatePipe
+    CustomDatePipe,
+    HelpRequestComponent,
+    CreateHelpRequestComponent
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,7 @@ import { SkillCreateComponent } from './skill/skill-create/skill-create.componen
 import { SkillUpdateComponent } from './skill/skill-update/skill-update.component';
 import { RoleCreateComponent } from './role/role-create/role-create.component';
 import { RoleUpdateComponent } from './role/role-update/role-update.component';
+import {HelpRequestComponent} from './help-request/help-request.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -28,6 +29,8 @@ const appRoutes: Routes = [
     { path: 'projects/create', component: ProjectCreateComponent },
     { path: 'projects/update/:id', component: ProjectUpdateComponent },
     { path: 'projects/view/:id', component: ProjectViewComponent},
+    { path: 'help-request', component: HelpRequestComponent },
+    { path: 'projects/help-request', component: HelpRequestComponent },
     { path: 'users', component: UserComponent},
     { path: 'users/:id', component: UserViewComponent},
     { path: 'admin', component: AdminComponent },

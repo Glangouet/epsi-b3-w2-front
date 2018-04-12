@@ -10,10 +10,8 @@
       <tr>
         <th scope="col">#id</th>
         <th scope="col">Name</th>
-        <th scope="col">Description</th>
+        <th scope="col">Token</th>
         <th scope="col">Partners</th>
-        <th scope="col">Start date</th>
-        <th scope="col">End date</th>
         <th scope="col">Creation date</th>
         <th scope="col">View</th>
         <th scope="col">update</th>
@@ -24,14 +22,12 @@
       <tr *ngFor="let project of projects;">
         <td>{{ project.id }}</td>
         <td>{{ project.name }}</td>
-        <td>{{ project.description }}</td>
+        <td>{{ project.token }}</td>
         <td>
           <ul>
             <li *ngFor="let partner of project.partners">{{ partner.username }}</li>
           </ul>
         </td>
-        <td>{{ project.startDate | customDate }}</td>
-        <td>{{ project.endDate | customDate }}</td>
         <td>{{ project.creationDate | customDate }}</td>
         <td><button class="btn btn-sm btn-primary" [routerLink]="['/projects/view/', project.id]" ><i class="fa fa-eye"></i></button></td>
         <td><button class="btn btn-sm btn-warning" [routerLink]="['/projects/update/', project.id]"><i class="fa fa-wrench"></i></button></td>
