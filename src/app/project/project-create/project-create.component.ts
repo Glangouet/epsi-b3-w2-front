@@ -10,6 +10,7 @@ import {Project} from '../../class/project';
 export class ProjectCreateComponent implements OnInit {
 
   private project: Project;
+
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
@@ -17,6 +18,7 @@ export class ProjectCreateComponent implements OnInit {
   }
 
   public addProject() {
+    console.log(this.project);
     this.projectService.createProject(this.project, state => {
       console.log(state);
       this.project = new Project();

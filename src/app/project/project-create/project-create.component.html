@@ -14,20 +14,36 @@
                  #name="ngModel"
                  name="name"
                  [(ngModel)]="project.name">
-        </div> // TODO
+        </div>
         <div class="form-group">
           <label for="description">Description of project:</label>
-          <input type="text" class="form-control" id="description">
+          <input type="text"
+                 class="form-control"
+                 id="description"
+                 #description="ngModel"
+                 name="description"
+                 [(ngModel)]="project.description">
         </div>
         <div class="form-group">
-          <label for="users">Select partners</label>
-          <input type="text" class="form-control" id="users">
+          <label for="partners">Select partners</label>
+          <select id="partners"
+                  #partners="ngModel"
+                  name="partners"
+                  [(ngModel)]="project.partners" multiple>
+            <option value="1">Guillaume</option>
+          </select>
         </div>
         <div class="form-group">
-          <label for="date-start">Date de début du projet:</label>
+          <label for="dateStart">Date de début du projet:</label>
           <div class="form-group">
-            <div class='input-group date' id='datetimepicker1'>
-              <input type='text' class="form-control" id="date-start" />
+            <div class='input-group'>
+              <input type='text'
+                     class="form-control"
+                     id="dateStart"
+                     #dateStart="ngModel"
+                     name="dateStart"
+                     [(ngModel)]="project.dateStart"
+                     placeholder="yyyy-mm-dd"/>
               <span class="input-group-addon">
                 <span class="fa fa-calendar"></span>
               </span>
@@ -35,10 +51,16 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="date-end">Date de fin du projet:</label>
+          <label for="dateEnd">Date de fin du projet:</label>
           <div class="form-group">
-            <div class='input-group date' id='datetimepicker2'>
-              <input type='text' class="form-control" id="date-end" />
+            <div class='input-group'>
+              <input type='text'
+                     class="form-control"
+                     id="dateEnd"
+                     #dateEnd="ngModel"
+                     name="dateEnd"
+                     [(ngModel)]="project.dateEnd"
+                     placeholder="yyyy-mm-dd"/>
               <span class="input-group-addon">
                 <span class="fa fa-calendar"></span>
               </span>

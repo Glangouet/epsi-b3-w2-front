@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../class/user';
 import { ProjectService } from '../../services/project.service';
-import { Project } from '../../class/project';
 
 @Component({
   selector: 'app-project-my',
@@ -10,36 +8,15 @@ import { Project } from '../../class/project';
 })
 export class ProjectMyComponent implements OnInit {
 
-  private user: User;
-  private project: Project;
-  private myProjects: Project[];
-  private allProjects: Project[];
+  private projects: any;
 
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
-
-  }
-
-  public getProjects() {
-    this.projectService.getAllProjects(state => {
-      console.log(state);
-      this.allProjects = state;
-    });
-  }
-
-  public getProject() {
-    this.projectService.getProjectById(this.project.id, state => {
-      console.log(state);
-      this.project = state;
-    });
-  }
-
-  public getMyProjects() {
-    this.projectService.getProjectsByUserId(this.user.id, state => {
-      console.log(state);
-      this.project = state;
-    });
+      this.projectService.getAllProjects(data => {
+          console.log(data);
+          this.projects = data;
+      });
   }
 
 }
