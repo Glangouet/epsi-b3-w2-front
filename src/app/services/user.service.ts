@@ -116,10 +116,10 @@ export class UserService {
       );
   }
 
-  public getUsersByRoles(roles, callback) {
+  public getUsersByRole(role, callback) {
       this.http.post(
-          this.authService.getApiUrl() + '/user/get-by-roles',
-          roles
+          this.authService.getApiUrl() + '/api/user/get-by-role',
+          {role: role}
       ).subscribe(
           data => {
               callback(data);

@@ -51,7 +51,7 @@ export class ProjectService {
 
   public getAllProjects(callback) {
       this.http.get(
-          this.authService.getApiUrl() + '/project/get-all'
+          this.authService.getApiUrl() + '/api/project/get-all'
       ).subscribe(
           data => {
               callback(data);

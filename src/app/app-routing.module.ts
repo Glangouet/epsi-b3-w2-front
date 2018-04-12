@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
-  { path: '', component: LoginComponent },
+    { path: '', component: HomeComponent },
+    { path: 'login', component: LoginComponent },
     { path: 'projects', component: ProjectComponent },
     { path: 'my-projects', component: ProjectMyComponent },
     { path: 'projects/create', component: ProjectCreateComponent },
@@ -28,8 +29,6 @@ const appRoutes: Routes = [
     { path: 'admin/users', component: UserListComponent },
     { path: 'admin/users/create', component: UserCreateComponent},
     { path: 'admin/users/view/:id', component: UserUpdateComponent },
-    { path: 'login', component: LoginComponent }
-
 ];
 
 @NgModule({
