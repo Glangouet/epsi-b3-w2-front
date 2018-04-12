@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../services/user.service';
+import {AuthService} from '../services/auth.service';
 
 @Component({
   selector: 'app-admin',
@@ -11,5 +13,4 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

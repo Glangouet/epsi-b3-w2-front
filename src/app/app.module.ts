@@ -22,7 +22,17 @@ import { UserCreateComponent } from './admin/user-create/user-create.component';
 import { UserUpdateComponent } from './admin/user-update/user-update.component';
 import { ProjectMyComponent } from './project/project-my/project-my.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { CampusService } from './services/campus.service';
+import { SkillService } from './services/skill.service';
+import { RoleService } from './services/role.service';
+import { CampusCreateComponent } from './campus/campus-create/campus-create.component';
+import { CampusUpdateComponent } from './campus/campus-update/campus-update.component';
+import { SkillCreateComponent } from './skill/skill-create/skill-create.component';
+import { SkillUpdateComponent } from './skill/skill-update/skill-update.component';
+import { RoleCreateComponent } from './role/role-create/role-create.component';
+import { RoleUpdateComponent } from './role/role-update/role-update.component';
 
 
 @NgModule({
@@ -43,7 +53,14 @@ import {FormsModule} from '@angular/forms';
     UserUpdateComponent,
     UserViewComponent,
     ProjectMyComponent,
-    UserListComponent
+    UserListComponent,
+    LoginComponent,
+    CampusCreateComponent,
+    CampusUpdateComponent,
+    SkillCreateComponent,
+    SkillUpdateComponent,
+    RoleCreateComponent,
+    RoleUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +71,10 @@ import {FormsModule} from '@angular/forms';
   providers: [
       AuthService,
       UserService,
-      ProjectService
+      ProjectService,
+      CampusService,
+      SkillService,
+      RoleService
   ],
   bootstrap: [AppComponent]
 })
