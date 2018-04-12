@@ -1,3 +1,47 @@
-<p>
-  create-help-request works!
-</p>
+<div class="page-header">
+  <h2>Créer une demande</h2>
+</div>
+<hr>
+<div class="row">
+  <div class="col-lg-12">
+    <form (ngSubmit)="addRequest()" #requestForm="ngForm" enctype="multipart/form-data" style="max-width: 700px;" class="mx-auto">
+      <div class="form-group">
+        <label for="projectId">Pour quel projet ?</label>
+        <select id="projectId"
+                #projectId="ngModel"
+                name="projectId"
+                [(ngModel)]="request.projectId">
+          <option *ngFor="let project of projects" [ngValue]="project.id">{{project.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="title">Titre:</label>
+        <input type="text"
+               class="form-control"
+               id="title"
+               #title="ngModel"
+               name="title"
+               [(ngModel)]="request.title">
+      </div>
+      <div class="form-group">
+        <label for="description">Description de votre demande:</label>
+        <input type="text"
+               class="form-control"
+               id="description"
+               #description="ngModel"
+               name="description"
+               [(ngModel)]="request.description">
+      </div>
+      <div class="form-group">
+        <label for="usersRequested">Selectionnez si vous le souhaitez un ou des intervenants</label>
+        <select id="usersRequested"
+                #usersRequested="ngModel"
+                name="usersRequested"
+                [(ngModel)]="request.usersRequested" multiple>
+          <option *ngFor="let user of users" [ngValue]="user.id">{{user.username}}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

@@ -15,6 +15,7 @@ export class HelpRequestComponent implements OnInit {
   ngOnInit() {
     this.helpRequestService.getAll(data => {
       this.helpRequests = data;
+      console.log(data);
     });
   }
 

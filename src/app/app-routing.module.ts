@@ -33,6 +33,7 @@ import { RoleCreateComponent } from './role/role-create/role-create.component';
 import { RoleUpdateComponent } from './role/role-update/role-update.component';
 import {HelpRequestComponent} from './help-request/help-request.component';
 import { RoleDeleteComponent } from './role/role-delete/role-delete.component';
+import {CreateHelpRequestComponent} from './help-request/create-help-request/create-help-request.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
     { path: 'projects/update/:id', component: ProjectUpdateComponent },
     { path: 'projects/view/:id', component: ProjectViewComponent},
     { path: 'help-request', component: HelpRequestComponent },
+    { path: 'help-request/create', component: CreateHelpRequestComponent },
     { path: 'users', component: UserComponent},
     { path: 'users/:id', component: UserViewComponent },
     { path: 'admin/users', component: UserListComponent },

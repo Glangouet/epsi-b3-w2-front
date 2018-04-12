@@ -3,6 +3,6 @@ export class HelpRequest {
     public title;
     public description;
     public date;
-    public project;
-    public userRequested;
+    public projectId;
+    public usersRequested;
 }

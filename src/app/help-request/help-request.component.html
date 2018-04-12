@@ -13,19 +13,23 @@
         <th scope="col">Title of project</th>
         <th scope="col">User requested</th>
         <th scope="col">Creation date</th>
+        <th scope="col">View</th>
+        <th scope="col">Delete</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let request of helpRequests;" [routerLink]="['/projects/view/', request.id]" style="cursor: pointer;">
         <td>{{ request.id }}</td>
         <td>{{ request.title }}</td>
-        <td>{{ request.project.name }}</td>
+        <td>{{ request.projectId.name }}</td>
         <td>
           <ul>
-            <li *ngFor="let partner of request.userRequested">{{ partner.username }}</li>
+            <li *ngFor="let partner of request.usersRequested">{{ partner.username }}</li>
           </ul>
         </td>
         <td>{{ request.date | customDate }}</td>
+        <td><button class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></button></td>
+        <td><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
       </tr>
       </tbody>
     </table>
