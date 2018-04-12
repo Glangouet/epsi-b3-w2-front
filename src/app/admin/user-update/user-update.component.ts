@@ -11,7 +11,7 @@ export class UserUpdateComponent implements OnInit {
 
   private user: User;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) { } //, private activatedRoute: ActivatedRoute
 
   ngOnInit() {
   }
