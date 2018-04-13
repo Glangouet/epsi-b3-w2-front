@@ -3,6 +3,7 @@ import {SkillService} from '../../services/skill.service';
 import {UserService} from '../../services/user.service';
 import {User} from '../../class/user';
 import {ActivatedRoute} from '@angular/router';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-user-view',
@@ -14,7 +15,10 @@ export class UserViewComponent implements OnInit {
   private allSkills: any;
   private user: User;
 
-  constructor(private skillService: SkillService, private userService: UserService, private route: ActivatedRoute) { }
+  constructor(private authService: AuthService,
+              private skillService: SkillService,
+              private userService: UserService,
+              private route: ActivatedRoute) {}
 
   ngOnInit() {
       this.skillService.getAllSkills(data => {

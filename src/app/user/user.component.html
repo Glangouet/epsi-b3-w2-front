@@ -20,7 +20,10 @@
         <td>{{ user.username }}</td>
         <td>{{ user.email }}</td>
         <td>{{ user.roles }}</td>
-        <td>{{ user.skills }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let skill of user.skills; let index = key">{{ skill.label }}</li>
+          </ul>
       </tr>
       </tbody>
     </table>
