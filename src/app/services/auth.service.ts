@@ -19,7 +19,7 @@ export class AuthService {
     private sessionUsername: string;
 
     constructor(private http: HttpClient, private router: Router) {
-        this.apiUrl = 'http://localhost:8002';
+        this.apiUrl = 'http://localhost:8000';
         if (localStorage.getItem('token')) {
             this.isConnected = true;
         } else {

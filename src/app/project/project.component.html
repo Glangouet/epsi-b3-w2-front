@@ -10,6 +10,7 @@
         <th scope="col">#id</th>
         <th scope="col">Nom</th>
         <th scope="col">Equipiers</th>
+        <th scope="col">Jetons restants</th>
         <th scope="col">Date de création</th>
       </tr>
       </thead>
@@ -22,10 +23,8 @@
               <li *ngFor="let partner of project.partners">{{ partner.username }}</li>
             </ul>
           </td>
+          <td>{{ project.token }}</td>
           <td>{{ project.creationDate | customDate }}</td>
-          <td><button class="btn btn-sm btn-primary" [routerLink]="['/projects/view/', project.id]"><i class="fa fa-eye"></i></button></td>
-          <td><button class="btn btn-sm btn-warning" [routerLink]="['/projects/update/', project.id]"><i class="fa fa-wrench"></i></button></td>
-          <td><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
         </tr>
       </tbody>
     </table>
