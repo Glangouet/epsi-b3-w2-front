@@ -51,7 +51,7 @@ export class SkillService {
 
   public getAllSkills(callback) {
       this.http.get(
-          this.authService.getApiUrl() + '/skill/get-all'
+          this.authService.getApiUrl() + '/api/skill/get-all'
       ).subscribe(
           data => {
               callback(data);

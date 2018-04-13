@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {SkillService} from '../../services/skill.service';
+import {UserService} from '../../services/user.service';
+import {User} from '../../class/user';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-user-view',
@@ -7,9 +11,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserViewComponent implements OnInit {
 
-  constructor() { }
+  private allSkills: any;
+  private user: User;
+
+  constructor(private skillService: SkillService, private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+      this.skillService.getAllSkills(data => {
+          this.allSkills = data;
+      });
+    this.user = new User();
+    this.route.params.subscribe(params => this.user.id = params.id);
+    this.userService.getUserById(this.user.id, data => {
+      this.user.id = data.id;
+      this.user.username = data.username;
+      this.user.email = data.email;
+      this.user.firstname = data.username;
+      this.user.lastname = data.username;
+      this.user.roles = data.roles;
+      this.user.skills = data.skills;
+    });
+  }
+
+  public updateSkills() {
+    this.userService.updateUser(this.user, state => {
+      console.log(state);
+    });
   }
 
 }

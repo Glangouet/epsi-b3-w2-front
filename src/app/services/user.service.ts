@@ -36,8 +36,9 @@ export class UserService {
   }
 
   public updateUser(user: User, callback) {
-      this.http.put(
-          this.authService.getApiUrl() + '/user/update',
+      console.log(user);
+      this.http.post(
+          this.authService.getApiUrl() + '/api/user/update',
           user
       ).subscribe(
           data => {
@@ -51,7 +52,7 @@ export class UserService {
 
   public getUserById(id, callback) {
       this.http.get(
-          this.authService.getApiUrl() + '/user/get-by-id/' + id
+          this.authService.getApiUrl() + '/api/user/get-by-id/' + id
       ).subscribe(
           data => {
               callback(data);

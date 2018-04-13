@@ -5,6 +5,6 @@ export class User {
     public email;
     public firstname;
     public lastname;
-    public skills;
+    public skills: any;
     public roles;
 }
