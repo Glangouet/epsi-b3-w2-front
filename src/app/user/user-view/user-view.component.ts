@@ -24,7 +24,7 @@ export class UserViewComponent implements OnInit {
     this.route.params.subscribe(params => this.user.id = params.id);
     this.userService.getUserById(this.user.id, data => {
       this.user.id = data.id;
-      this.user.username = data.username;
+      this.user.login = data.username;
       this.user.email = data.email;
       this.user.firstname = data.username;
       this.user.lastname = data.username;
